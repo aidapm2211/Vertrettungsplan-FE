@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blazor-Style Admin Dashboard</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="Style.css">
+  
+</head>
+<body>
+    <link rel="Panel" href="Panel.html">
+    <div id="sidebar"></div>
+            <!-- Main Content -->
+            <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4 py-3">
+                <div class="card">
+                    <div class="card-body">
+                        <h1 class="card-title">Admin Dashboard</h1>
+                        <p class="card-text">This is a lightweight admin dashboard inspired by Blazor.</p>
+                    </div>
+                </div>
+                
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title">Blazor</h5>
+                                <p class="card-text">Blazor is an experimental .NET web framework.</p>
+                                <a href="#" class="btn btn-success">Learn More</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title">CSS Grid</h5>
+                                <p class="card-text">The CSS Grid Layout Module offers a powerful grid-based layout system.</p>
+                                <a href="#" class="btn btn-success">Learn More</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title">Bootstrap</h5>
+                                <p class="card-text">Bootstrap is a free and open-source front-end framework.</p>
+                                <a href="#" class="btn btn-success">Learn More</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+
+
+    <script>
+        // Load sidebar content dynamically
+        fetch('panel.html')
+            .then(response => response.text())
+            .then(data => document.getElementById('sidebar').innerHTML = data);
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
